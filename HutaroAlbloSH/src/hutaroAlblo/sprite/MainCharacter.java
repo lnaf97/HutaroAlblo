@@ -98,7 +98,7 @@ public class MainCharacter extends AnimatedSprite
     public boolean checkBoundaries()
     {
         return x >= 0 && x + width <= HutaroAlbloScene.GAME_WIDTH &&
-                y >= 0;
+                y + height <= HutaroAlbloScene.GAME_HEIGHT;
     }
 
     public void jump()

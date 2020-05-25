@@ -13,27 +13,23 @@ import java.nio.file.Paths;
 
 public class WelcomeScene extends HutaroAlbloScene
 {
-    public static final String WELCOME_SCREEN_PATH =
-            "assets/img/welcome.png";
+    public static final String WELCOME_SCREEN1_PATH =
+            "assets/img/WelcomeScene1.png";
 
-    //public static final String WELCOME_SONG =
-    //        "assets/sound/welcome.mp3";
+    public static final String WELCOME_SCREEN2_PATH =
+            "assets/img/WelcomeScene2.png";
 
-    //public static final String GAME_START_SONG =
-    //        "assets/sound/gamestart.mp3";
-
-    private Image imgBackground;
+    private Image welcomeImage1;
+    private Image welcomeImage2;
 
     public WelcomeScene()
     {
         super();
-
         try
         {
-            imgBackground = new Image(Files.newInputStream(
-                    Paths.get(WELCOME_SCREEN_PATH)));
-        } catch (Exception e) {
-        }
+            welcomeImage1 = new Image(Files.newInputStream(Paths.get(WELCOME_SCREEN1_PATH)));
+            welcomeImage2 = new Image(Files.newInputStream(Paths.get(WELCOME_SCREEN2_PATH)));
+        } catch (Exception e){}
     }
 
     @Override
@@ -41,25 +37,29 @@ public class WelcomeScene extends HutaroAlbloScene
     {
         activeKeys.clear();
 
-        //playSound(WELCOME_SONG);
-
         new AnimationTimer()
         {
             public void handle(long currentNanoTime)
             {
+                try
+                {
+                    TitleAnimation();
+                } catch (InterruptedException e) { }
                 if(activeKeys.contains(KeyCode.SPACE))
                 {
                     this.stop();
-                    //mediaPlayer.stop();
-                    //playSound(GAME_START_SONG);
                     HutaroAlbloMain.setScene(HutaroAlbloMain.GAME_SCENE);
                 } else if (activeKeys.contains(KeyCode.ESCAPE)) {
                     this.stop();
-                    //mediaPlayer.stop();
                     HutaroAlbloMain.exit();
                 }
-                gc.drawImage(imgBackground, 0, 0);
             }
         }.start();
+    }
+
+    public void TitleAnimation() throws InterruptedException
+    {
+        gc.drawImage(welcomeImage1, 0, 0);
+        gc.drawImage(welcomeImage2, 0, 0);
     }
 }

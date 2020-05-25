@@ -40,9 +40,10 @@ public abstract class Level
         return background;
     }
 
-    public void move(MainCharacter character)
+    public void move(MainCharacter character, boolean levelFinished)
     {
-        goal.move();
+        if ( levelFinished )
+            goal.move();
     }
 
     public void draw(GraphicsContext gc)

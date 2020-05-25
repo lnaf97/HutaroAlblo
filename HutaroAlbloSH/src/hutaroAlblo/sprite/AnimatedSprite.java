@@ -53,7 +53,10 @@ public abstract class AnimatedSprite extends Sprite
 
     protected void updateSpriteCoordinates()
     {
-        if ( this != null ) {
+        if ( currentDirection < spriteXCoordinates.length
+                && currentSprite < spriteXCoordinates[currentDirection].length
+            && currentDirection < spriteYCoordinates.length
+                && currentSprite < spriteYCoordinates[currentDirection].length) {
             spriteX = spriteXCoordinates[currentDirection][currentSprite];
             spriteY = spriteYCoordinates[currentDirection][currentSprite];
         }
@@ -76,6 +79,6 @@ public abstract class AnimatedSprite extends Sprite
     public boolean collidesWith(AnimatedSprite sp)
     {
         return (x + width / 2 > sp.x && x < sp.x + sp.width / 2 &&
-                y + height / 2 > sp.y && y < sp.y + sp.height / 2);
+                y + height > sp.y && y < sp.y + sp.height );
     }
 }

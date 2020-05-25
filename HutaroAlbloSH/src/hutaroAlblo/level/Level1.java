@@ -54,17 +54,18 @@ public class Level1 extends Level
     }
 
     @Override
-    public void move(MainCharacter character)
+    public void move(MainCharacter character, boolean levelFinished)
     {
         if ( background.getY() < 0 ) {
-            double scrollSpeed = character.getY() <= 300 ? 0.6 : 0.3;
+            double scrollSpeed = character.getY() <= 400 ? 1.2 :
+                    character.getY() <= 500 ? 0.6 : 0.3;
             for (int i = 0; i < platforms.length; i++) {
                 platforms[i].movePlatform(scrollSpeed);
             }
             background.scrollBackground(scrollSpeed);
-            goal.moveTo(640, goal.getY() - scrollSpeed);
+            goal.moveTo(520, goal.getY() + scrollSpeed);
         }
-        super.move(character);
+        super.move(character, levelFinished);
     }
 
     @Override
@@ -77,10 +78,10 @@ public class Level1 extends Level
     @Override
     public void restore(MainCharacter character)
     {
-        character.moveTo(580, 405);
+        character.moveTo(580, 395);
         character.resetJumpForce();
         character.animate(AnimatedSprite.LEFT);
-        goal.moveTo(640, -2434);
+        goal.moveTo(520, -2561);
         background.moveTo(0,-2600);
         for ( int i = 0; i < platforms.length; i++ )
         {
