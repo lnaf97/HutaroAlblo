@@ -13,14 +13,19 @@ Press Left to move on left direction.
 
 Press Right to move on right direction.
 
-Press Space to jump.
+Press SpaceBar to jump.
 
 	- You can move to left and right while jumping, but is easier to move to the direction that you started the jump.
 		If you try to move back while jumping, you will move slower.
 		
+	- You can keep pressed the SpaceBar to jump longer.
 		
-Climb to the top to finish the game. (Doesn't work yet.)
+		
+Climb to the top to finish the game.
 
+(Error: Final door doesn't animates if the player keep in place)
+
+Press Enter on the Level Complete scene to return into the starting scene.
 
 If you get out of the screen over bottom side, you lose.
 
@@ -30,8 +35,3 @@ Press Enter on the Game Over scene to return into the starting scene.
 Press Escape into the game to back to the starting scene.
 
 Press Escape into the starting scene to close the game.
-
-
-# Errors
-
-The game does not run: MediaPlayer error.
