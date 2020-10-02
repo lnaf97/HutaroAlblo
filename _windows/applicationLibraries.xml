@@ -1,14 +1,14 @@
 <application>
   <component name="libraryTable">
-    <library name="javafx-swt">
+    <library name="javafx.controls">
       <CLASSES>
-        <root url="jar://C:/javafx-sdk/lib/javafx-swt.jar!/" />
-        <root url="jar://C:/javafx-sdk/lib/javafx.base.jar!/" />
         <root url="jar://C:/javafx-sdk/lib/javafx.controls.jar!/" />
-        <root url="jar://C:/javafx-sdk/lib/javafx.graphics.jar!/" />
+        <root url="jar://C:/javafx-sdk/lib/javafx-swt.jar!/" />
         <root url="jar://C:/javafx-sdk/lib/javafx.fxml.jar!/" />
-        <root url="jar://C:/javafx-sdk/lib/javafx.media.jar!/" />
+        <root url="jar://C:/javafx-sdk/lib/javafx.base.jar!/" />
         <root url="jar://C:/javafx-sdk/lib/javafx.swing.jar!/" />
+        <root url="jar://C:/javafx-sdk/lib/javafx.graphics.jar!/" />
+        <root url="jar://C:/javafx-sdk/lib/javafx.media.jar!/" />
         <root url="jar://C:/javafx-sdk/lib/javafx.web.jar!/" />
       </CLASSES>
       <JAVADOC />
