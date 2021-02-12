@@ -1,7 +1,7 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="Project 'CardServer'" />
-    <option name="defaultScopeName" value="Project 'CardServer'" />
-    <option name="SEARCH_SCOPE" value="Project 'CardServer'" />
+    <option name="customScope" value="Project 'MyPlanTVFX'" />
+    <option name="defaultScopeName" value="Project 'MyPlanTVFX'" />
+    <option name="SEARCH_SCOPE" value="Project 'MyPlanTVFX'" />
   </component>
 </application>
